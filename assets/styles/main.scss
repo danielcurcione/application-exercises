@@ -35,3 +35,14 @@ html, body {
     }
   }
 }
+
+@media screen and (max-width: 650px) {
+  .apps {
+    flex-direction: column;
+
+    &__block {
+      width: 100%;
+      margin-bottom: 20px !important;
+    }
+  }
+}
