@@ -1,4 +1,10 @@
-// MAIN STYLE 
+// GAME COLORS:
+$violet: rgb(255, 94, 247);
+$purple: rgb(163, 0, 163);
+$cyan: rgb(1, 218, 218);
+$blue: rgb(83, 83, 228);
+
+// MAIN STYLE
 html, body {
   width: 100%;
   height: 100%;
@@ -39,13 +45,13 @@ html, body {
 .input-items {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 
   &__item {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: auto;
     margin-right: 50px;
@@ -76,6 +82,109 @@ span.tag {
   margin: 2px;
 }
 
+.game {
+  margin-top: 80px;
+  font-family: 'Press Start 2P', cursive;
+  
+  h1 {
+    color: $cyan;
+    text-shadow: 2px 0 0 $violet,
+                0px 2px 0 $purple,
+  }
+
+  &__menu {
+    text-align: center;
+
+    &__item span {
+      font-size: 20px;
+      color: grey;
+
+      &:hover {
+        color: $cyan;
+        cursor: pointer;
+        text-shadow: 2px 0 0 $blue,
+                0 2px 0 $blue,
+      }
+
+      &.active {
+        color: $blue;
+        text-shadow: 2px 0 0 $cyan,
+                0 2px 0 $cyan,
+      }
+    }
+  }
+
+  &__section {
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+
+    &__player {
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+
+      div.images {
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        position: relative;
+
+        .image {
+          width: 30%;
+        }
+
+        div.alert {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(255, 0, 0, 0.5);
+          color: yellow;
+          font-weight: 700;
+          font-size: 16px;
+    
+          p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            text-shadow: 2px 0 0 $blue,
+                    0 2px 0 $blue,
+          }
+        }
+      }
+    }
+
+    &__player_human {
+      .image {
+        width: 30%;
+        transition: 0.2s;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.countdown {
+  font-size: 50px;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
 @media screen and (max-width: 650px) {
   .apps {
     flex-direction: column;
@@ -90,5 +199,17 @@ span.tag {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+  }
+
+  .game__section {
+    flex-direction: column;
+
+    &__player {
+      width: 100% !important;
+    }
+
+    .countdown {
+      margin: 30px auto;
+    }
   }
 }
