@@ -2,7 +2,7 @@
   <div class="container is-max-desktop">
     
     <div class="section homepage">
-      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
             <nuxt-link to="/" style="margin: 0; padding: 0"> <a class="has-text-grey">Home</a> </nuxt-link>

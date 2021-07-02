@@ -2,7 +2,7 @@
   <div class="container is-max-desktop">
     
     <div class="section homepage">
-      <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
             <nuxt-link to="/"> <a class="has-text-white-ter">Home</a> </nuxt-link>
@@ -18,7 +18,7 @@
           <div class="block mb-1 is-flex is-align-items-center is-flex-direction-row">
             <span class="mr-2"> 📄 </span>
             <nuxt-link to="/foobar">
-              <h3 class="title has-text-white-ter is-3">FooBar ↗</h3>
+              <h4 class="title has-text-white-ter is-4">FooBar ↗</h4>
             </nuxt-link>
           </div>
           <div class="block has-text-grey-light pl-2 pr-2 pb-2">
@@ -28,8 +28,8 @@
         <div class="block apps__block">
           <div class="block mb-1 is-flex is-align-items-center is-flex-direction-row">
             <span class="mr-2"> ✌🏻 </span>
-            <nuxt-link to="/">
-              <h3 class="title has-text-white-ter is-3">Rock Paper Scissors ↗</h3>
+            <nuxt-link to="/rockpaperscissor">
+              <h4 class="title has-text-white-ter is-4">Rock Paper Scissors ↗</h4>
             </nuxt-link> 
           </div>
           <div class="block has-text-grey-light pl-2 pr-2 pb-2">
