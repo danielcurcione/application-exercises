@@ -36,6 +36,46 @@ html, body {
   }
 }
 
+.input-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: auto;
+    margin-right: 50px;
+
+    input {
+      width: 80%;
+      background-color: transparent;
+      border: 1px solid transparent;
+      transition: 0.3s;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    input:hover {
+      border: 1px solid grey;
+    }
+
+    input::placeholder {
+      color: grey;
+    }
+  }
+}
+
+span.tag {
+  background-color: black;
+  color: white;
+  margin: 2px;
+}
+
 @media screen and (max-width: 650px) {
   .apps {
     flex-direction: column;
@@ -44,5 +84,11 @@ html, body {
       width: 100%;
       margin-bottom: 20px !important;
     }
+  }
+
+  .input-items {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }
