@@ -28,6 +28,7 @@
       </div>
 
       <button class="button is-dark" @click="startFooBar()">Start</button>
+      <button class="button is-light" @click="resetParams()">Reset</button>
 
       <div class="block mt-5">
         <template v-for="item in numbers">
@@ -73,6 +74,12 @@ export default {
         return { value: 'Bar', class: 'is-danger' }
       
       return { value: number, class: '' }
+    },
+
+    resetParams() {
+      this.foo = null
+      this.bar = null
+      this.numbers = []
     }
   }
 }
