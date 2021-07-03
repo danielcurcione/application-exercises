@@ -2,43 +2,34 @@
   <div class="container is-max-desktop">
     
     <div class="section homepage">
-      <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li>
-            <nuxt-link to="/"> <a class="has-text-white-ter">Home</a> </nuxt-link>
-          </li>
-        </ul>
-      </nav>
-
-      <h5 class="title has-text-grey is-5 mb-1">Candidatura</h5>
-      <h1 class="title has-text-white-ter is-1">Daniel Curcione</h1>
+      <Header title="Daniel Curcione" subtitle="Candidatura" link="home"/>
 
       <div class="apps">
-        <div class="block apps__block">
-          <div class="block mb-1 is-flex is-align-items-center is-flex-direction-row">
-            <span class="mr-2"> 📄 </span>
-            <nuxt-link to="/foobar">
-              <h4 class="title has-text-white-ter is-4">FooBar ↗</h4>
-            </nuxt-link>
-          </div>
-          <div class="block has-text-grey-light pl-2 pr-2 pb-2">
-            Scrivi un piccolo programma che stampi ogni numero da 1 a 100 su una nuova riga.  Per ogni multiplo di 3, stampa “Foo” invece del numero.  Per ogni multiplo di 5, stampa “Bar” invece del numero.  Per ogni numero multiplo di 3 e 5 insieme, stampa “FooBar” invece del numero.
-          </div>
-        </div>
-        <div class="block apps__block">
-          <div class="block mb-1 is-flex is-align-items-center is-flex-direction-row">
-            <span class="mr-2"> ✌🏻 </span>
-            <nuxt-link to="/rockpaperscissor">
-              <h4 class="title has-text-white-ter is-4">Rock Paper Scissors ↗</h4>
-            </nuxt-link> 
-          </div>
-          <div class="block has-text-grey-light pl-2 pr-2 pb-2">
-            Sono un assiduo giocatore, per questo voglio giocare a “carta forbice e sasso”. Posso giocare Umano vs Computer? Posso giocare Computer vs Computer? Posso giocare una nuova partita conclusa quella precedente?
-          </div>
-        </div>
+        <template v-for="app in apps">
+          <AppContainer :icon="app.icon" :title="app.title" :link="app.link" :description="app.description" :key="app.title"/>
+        </template>
       </div>
-      
     </div>
     
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      apps: [{
+        icon: '📄',
+        title: 'FooBar',
+        link: '/foobar',
+        description: 'Scrivi un piccolo programma che stampi ogni numero da 1 a 100 su una nuova riga. Per ogni multiplo di 3, stampa “Foo” invece del numero. Per ogni multiplo di 5, stampa “Bar” invece del numero. Per ogni numero multiplo di 3 e 5 insieme, stampa “FooBar” invece del numero.'
+      }, {
+        icon: '✌🏻',
+        title: 'Rock Paper Scissor',
+        link: '/rockpaperscissor',
+        description: 'Sono un assiduo giocatore, per questo voglio giocare a “carta forbice e sasso”. Posso giocare Umano vs Computer? Posso giocare Computer vs Computer? Posso giocare una nuova partita conclusa quella precedente?'
+      }]
+    }
+  }
+}
+</script>

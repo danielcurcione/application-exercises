@@ -83,7 +83,7 @@ span.tag {
 }
 
 .game {
-  margin-top: 60px;
+  margin-top: 80px;
   font-family: 'Press Start 2P', cursive;
   
   h1 {
@@ -105,12 +105,6 @@ span.tag {
         text-shadow: 2px 0 0 $blue,
                 0 2px 0 $blue,
       }
-
-      &.active {
-        color: $blue;
-        text-shadow: 2px 0 0 white,
-                0 2px 0 white,
-      }
     }
   }
 
@@ -123,10 +117,24 @@ span.tag {
     flex-direction: row;
     justify-content: center;
 
-    .reset-button, .game-results {
+    .game-results {
       width: 100% !important;
       text-align: center !important;
-      margin-bottom: 20px;
+      margin: 20px 0;
+      font-size: 22px;
+      color: $purple;
+    }
+
+    .reset-button {
+      cursor: pointer;
+      width: 100% !important;
+      text-align: center !important;
+
+      &:hover {
+        color: $cyan !important;
+        text-shadow: 1px 0 0 $blue,
+                0 1px 0 $blue,
+      }
     }
 
     &__player {

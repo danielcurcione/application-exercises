@@ -2,27 +2,15 @@
   <div class="container is-max-desktop">
     
     <div class="section homepage">
-      <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li>
-            <nuxt-link to="/" style="margin: 0; padding: 0"> <a class="has-text-grey">Home</a> </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/" style="margin: 0; padding: 0"> <a class="has-text-white-ter">FooBar</a> </nuxt-link>
-          </li>
-        </ul>
-      </nav>
-
-      <h5 class="title has-text-grey is-5 mb-1">Esercitazione 1</h5>
-      <h1 class="title has-text-white-ter is-1">FooBar</h1>
+      <Header title="FooBar" subtitle="Esercitazione 1" link="home/foobar"/>
 
       <div class="block input-items">
-        <div class="input-items__item">
-          <h5 class="title has-text-white-ter is-5 mb-1">Foo: </h5>
+        <div class="input-items__item mt-2">
+          <h5 class="title has-text-white-ter is-5 mt-1 mb-1">Foo: </h5>
           <input v-model="foo" class="input ml-2" placeholder="Divisor number">
         </div>
-        <div class="input-items__item">
-          <h5 class="title has-text-white-ter is-5 mb-1">Bar: </h5>
+        <div class="input-items__item mt-2">
+          <h5 class="title has-text-white-ter is-5 mt-1 mb-1">Bar: </h5>
           <input v-model="bar" class="input ml-2" placeholder="Divisor number">
         </div>
       </div>
