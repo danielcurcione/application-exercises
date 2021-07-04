@@ -232,19 +232,35 @@ span.tag {
     align-items: flex-start;
   }
 
-  .game__section {
-    flex-direction: column;
+  .game {
+    &__menu {
+      .title {
+        font-size: 25px;
+      }
 
-    &__player {
-      width: 100% !important;
+      &__item span {
+        font-size: 18px;
+        line-height: 2;
+      }
     }
 
-    .countdown {
-      margin: 30px auto;
-    }
-  }
+    &__section {
+      flex-direction: column;
+  
+      &__player {
+        width: 100% !important;
+      }
+  
+      .countdown {
+        margin: 30px auto;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+      }
 
-  .game-results {
-    width: 95% !important;
+      .reset-button {
+        line-height: 2;
+      }
+    }
   }
 }
