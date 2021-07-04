@@ -4,6 +4,9 @@
     <div class="section homepage">
       <Header title="Daniel Curcione" subtitle="Candidatura" link="home"/>
 
+      <a href="https://github.com/danielcurcione/application-exercises" class="button is-dark is-small mt-3">GitHub</a>
+      <a href="https://www.linkedin.com/in/danielcurcione/" class="button is-dark is-small mt-3">LinkedIn</a>
+
       <div class="apps">
         <template v-for="app in apps">
           <AppContainer :icon="app.icon" :title="app.title" :link="app.link" :description="app.description" :key="app.title"/>
